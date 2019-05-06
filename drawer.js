@@ -85,33 +85,33 @@ function createShape(x, y) {
 
 
 // let's create on draw on MOB
-let isMouseDown = false
-document.addEventListener("touchmove", function(e) {
-    if(isMouseDown) {
-        createShape(e.pageX, e.pageY)
-    }
-})
-
-document.addEventListener("touchstart", function() {
-    isMouseDown = true
-})
-
-document.addEventListener("touchend", function() {
-    isMouseDown = false
-})
-
-// let's create on draw on DESK
 // let isMouseDown = false
-// document.addEventListener("mousemove", function(e) {
+// document.addEventListener("touchmove", function(e) {
 //     if(isMouseDown) {
 //         createShape(e.pageX, e.pageY)
 //     }
 // })
 
-// document.addEventListener("mousedown", function() {
+// document.addEventListener("touchstart", function() {
 //     isMouseDown = true
 // })
 
-// document.addEventListener("mouseup", function() {
+// document.addEventListener("touchend", function() {
 //     isMouseDown = false
 // })
+
+// let's create on draw on DESK
+let isMouseDown = false
+document.addEventListener("mousemove", function(e) {
+    if(isMouseDown) {
+        createShape(e.pageX, e.pageY)
+    }
+})
+
+document.addEventListener("mousedown", function() {
+    isMouseDown = true
+})
+
+document.addEventListener("mouseup", function() {
+    isMouseDown = false
+})
